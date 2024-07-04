@@ -38,36 +38,97 @@
     </script>
 
     <h1>Realiza tu reserva: </h1>
-</body>
-<div class="min-h-screen flex items-center justify-center bg-zinc-100 dark :bg-zinc-900">
-    <div class="bg-card text-card-foreground p-8 rounded-lg shadow-lg max-w-md w-full">
-      <h1 class="text-center text-2xl font-bold mb-6">reservación</h1>
-      <form class="space-y-4">
-        <div class="flex space-x-4">
-          <div class="flex-1">
-            <label for="actividad" class="block text-sm font-medium text-muted-foreground">actividad</label>
-            <input
-              type="text"
-              id="actividad"
-              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-              placeholder="actividad "
-            />
-          </div>
-          <div class="flex-1">
-            <label for="cantidad de personas" class="block text-sm font-medium text-muted-foreground">cantidad de pesonas</label>
-            <input
-              type="number"
-              id="cantidad de personas"
-              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-              placeholder="0"
-            />
-          </div>
+
+    <div class="min-h-screen flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
+        <div class="bg-card text-card-foreground p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h1 class="text-center text-2xl font-bold mb-6">Reservación</h1>
+            <form class="space-y-4">
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="actividad" class="block text-sm font-medium text-muted-foreground">Actividad</label>
+                        <input
+                            type="text"
+                            id="actividad"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            placeholder="Actividad"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <label for="cantidad-personas" class="block text-sm font-medium text-muted-foreground">Cantidad de personas</label>
+                        <input
+                            type="number"
+                            id="cantidad-personas"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            placeholder="0"
+                        />
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="cuando-asistira" class="block text-sm font-medium text-muted-foreground">Cuándo asistirá</label>
+                        <input
+                            type="date"
+                            id="cuando-asistira"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <label for="hora" class="block text-sm font-medium text-muted-foreground">Hora</label>
+                        <input
+                            type="time"
+                            id="hora"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                        />
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="nombre" class="block text-sm font-medium text-muted-foreground">Nombre</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            placeholder="Nombre"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <label for="telefono" class="block text-sm font-medium text-muted-foreground">Teléfono</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            placeholder="Teléfono"
+                        />
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="flex-1">
+                        <label for="email" class="block text-sm font-medium text-muted-foreground">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <label for="observaciones" class="block text-sm font-medium text-muted-foreground">Observaciones</label>
+                        <textarea
+                            id="observaciones"
+                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+                            rows="3"
+                            placeholder="Observaciones"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="flex items-center justify-end mt-4">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
         </div>
-        <div class="flex space-x-4">
-          <div class="flex-1">
-            <label for="cuando asistira" class="block text-sm font-medium text-muted-foreground">cuando asistira</label>
-            <input
-              type="date"
-              id="cuando asistira"
-              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"/>
+    </div>
+
+</body>
+</html>
+
           
