@@ -3,67 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolce Begliano</title>
     <link rel="stylesheet" href="style.css">
+    <title>Restaurante</title>
 </head>
 <body>
-    <!-- Encabezado -->
     <div id="header-container"></div>
-
-    <main>
-        <h1>Nuestro menú:</h1>
-        <div class="bg-primary text-primary-foreground py-4 px-6 rounded-lg shadow-lg max-w-xs mx-auto mt-8">
-            <div class="text-center">
-                <img src="img/Diseño_sin_título.png" alt="Buon appetito!" class="w-full h-auto rounded-lg mb-4">
-                <h1 class="text-3xl font-bold mb-2">Dolce Begliano Restaurant</h1>
-                <p class="text-lg text-muted-foreground">Bienvenidos a nuestro restaurante, donde cada comida es una experiencia inolvidable.</p>
-            </div>
-        </div>
-        <img src="img/menu.png" width="200" height="300" alt="Menú">
-    </main>
-
-    <!-- Script para manejar la navegación -->
     <script>
-        // Función para cargar el encabezado desde header.html
-        function loadHeader() {
-            fetch('header.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Error al cargar header.html');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                    
-                    // Event listeners para los botones del encabezado
-                    document.getElementById('reservaBtn').addEventListener('click', function() {
-                        window.location.href = '/index.html'; // Redirige a la página de reserva
-                    });
-
-                    document.getElementById('localizacionBtn').addEventListener('click', function() {
-                        window.location.href = '/localizacion.html'; // Redirige a la página de localización
-                    });
-
-                    document.getElementById('comoLlegarBtn').addEventListener('click', function() {
-                        window.location.href = '/como-llegar.html'; // Redirige a la página de cómo llegar (ajusta la URL según tu estructura)
-                    });
-
-                    document.getElementById('menuBtn').addEventListener('click', function() {
-                        window.location.href = '/menu.html'; // Redirige a la página de menú
-                    });
-
-                    document.getElementById('aboutBtn').addEventListener('click', function() {
-                        window.location.href = '/about.html'; // Redirige a la página de sobre nosotros
-                    });
-                })
-                .catch(error => {
-                    console.error('Hubo un problema con la solicitud fetch:', error);
-                });
-        }
-
-        // Cargar el encabezado al cargar la página
-        loadHeader();
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar header.html');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Hubo un problema con la solicitud fetch:', error);
+            });
     </script>
+    <!-- Contenido de la página -->
 </body>
 </html>
