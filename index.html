@@ -11,11 +11,11 @@
         <div class="nav-container">
             <div class="app-name">Dolce Begliano</div>
             <ul class="nav-list">
-                <li class="nav-item"><a href="/index.html">Reserva</a></li>
-                <li class="nav-item"><a href="/localizacion.html">Localización</a></li>
-                <li class="nav-item"><a href="/localizacion.html">Cómo llegar</a></li>
-                <li class="nav-item"><a href="/menu.html">Menú</a></li>
-                <li class="nav-item"><a href="/about.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a id="reservaBtn" href="#">Reserva</a></li>
+                <li class="nav-item"><a id="localizacionBtn" href="#">Localización</a></li>
+                <li class="nav-item"><a id="comoLlegarBtn" href="#">Cómo llegar</a></li>
+                <li class="nav-item"><a id="menuBtn" href="#">Menú</a></li>
+                <li class="nav-item"><a id="sobreNosotrosBtn" href="#">Sobre Nosotros</a></li>
             </ul>
         </div>
     </nav>
@@ -28,105 +28,31 @@
         </div>
     </header>
 
-    <div id="header-container"></div>
     <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
+        document.getElementById('reservaBtn').addEventListener('click', function() {
+            window.location.href = '/index.html';
+        });
+
+        document.getElementById('localizacionBtn').addEventListener('click', function() {
+            window.location.href = '/localizacion.html';
+        });
+
+        document.getElementById('comoLlegarBtn').addEventListener('click', function() {
+            window.location.href = '/como-llegar.html';
+        });
+
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            window.location.href = '/menu.html';
+        });
+
+        document.getElementById('sobreNosotrosBtn').addEventListener('click', function() {
+            window.location.href = '/about.html';
+        });
     </script>
 
-    <h1>Realiza tu reserva: </h1>
-
-    <div class="min-h-screen flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
-        <div class="bg-card text-card-foreground p-8 rounded-lg shadow-lg max-w-md w-full">
-            <h1 class="text-center text-2xl font-bold mb-6">Reservación</h1>
-            <form class="space-y-4">
-                <div class="flex space-x-4">
-                    <div class="flex-1">
-                        <label for="actividad" class="block text-sm font-medium text-muted-foreground">Actividad</label>
-                        <input
-                            type="text"
-                            id="actividad"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="Actividad"
-                        />
-                    </div>
-                    <div class="flex-1">
-                        <label for="cantidad-personas" class="block text-sm font-medium text-muted-foreground">Cantidad de personas</label>
-                        <input
-                            type="number"
-                            id="cantidad-personas"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="0"
-                        />
-                    </div>
-                </div>
-                <div class="flex space-x-4">
-                    <div class="flex-1">
-                        <label for="cuando-asistira" class="block text-sm font-medium text-muted-foreground">Cuándo asistirá</label>
-                        <input
-                            type="date"
-                            id="cuando-asistira"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                        />
-                    </div>
-                    <div class="flex-1">
-                        <label for="hora" class="block text-sm font-medium text-muted-foreground">Hora</label>
-                        <input
-                            type="time"
-                            id="hora"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                        />
-                    </div>
-                </div>
-                <div class="flex space-x-4">
-                    <div class="flex-1">
-                        <label for="nombre" class="block text-sm font-medium text-muted-foreground">Nombre</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="Nombre"
-                        />
-                    </div>
-                    <div class="flex-1">
-                        <label for="telefono" class="block text-sm font-medium text-muted-foreground">Teléfono</label>
-                        <input
-                            type="tel"
-                            id="telefono"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="Teléfono"
-                        />
-                    </div>
-                </div>
-                <div class="flex space-x-4">
-                    <div class="flex-1">
-                        <label for="email" class="block text-sm font-medium text-muted-foreground">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            placeholder="Email"
-                        />
-                    </div>
-                    <div class="flex-1">
-                        <label for="observaciones" class="block text-sm font-medium text-muted-foreground">Observaciones</label>
-                        <textarea
-                            id="observaciones"
-                            class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
-                            rows="3"
-                            placeholder="Observaciones"
-                        ></textarea>
-                    </div>
-                </div>
-                <div class="flex items-center justify-end mt-4">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    <main>
+        <!-- Aquí va el contenido principal de la página -->
+    </main>
 
 </body>
 </html>
