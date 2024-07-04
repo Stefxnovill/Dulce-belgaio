@@ -11,11 +11,11 @@
         <div class="nav-container">
             <div class="app-name">Dolce Begliano</div>
             <ul class="nav-list">
-                <li class="nav-item"><a id="reservaBtn" href="#">Reserva</a></li>
-                <li class="nav-item"><a id="localizacionBtn" href="#">Localización</a></li>
-                <li class="nav-item"><a id="comoLlegarBtn" href="#">Cómo llegar</a></li>
-                <li class="nav-item"><a id="menuBtn" href="#">Menú</a></li>
-                <li class="nav-item"><a id="sobreNosotrosBtn" href="#">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="index.html">Reserva</a></li>
+                <li class="nav-item"><a href="localizacion.html">Localización</a></li>
+                <li class="nav-item"><a href="como-llegar.html">Cómo llegar</a></li>
+                <li class="nav-item"><a href="menu.html">Menú</a></li>
+                <li class="nav-item"><a href="about.html">Sobre Nosotros</a></li>
             </ul>
         </div>
     </nav>
@@ -28,33 +28,30 @@
         </div>
     </header>
 
+    <h1>Realiza tu reserva:</h1>
+
+    <div class="min-h-screen flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
+        <div class="bg-card text-card-foreground p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h1 class="text-center text-2xl font-bold mb-6">Reservación</h1>
+            <form id="reservaForm" class="space-y-4">
+                <!-- Aquí va el contenido del formulario -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Script para redireccionar -->
     <script>
-        document.getElementById('reservaBtn').addEventListener('click', function() {
-            window.location.href = '/index.html';
-        });
-
-        document.getElementById('localizacionBtn').addEventListener('click', function() {
-            window.location.href = '/localizacion.html';
-        });
-
-        document.getElementById('comoLlegarBtn').addEventListener('click', function() {
-            window.location.href = '/como-llegar.html';
-        });
-
-        document.getElementById('menuBtn').addEventListener('click', function() {
-            window.location.href = '/menu.html';
-        });
-
-        document.getElementById('sobreNosotrosBtn').addEventListener('click', function() {
-            window.location.href = '/about.html';
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item a').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault(); // Evita el comportamiento por defecto del enlace
+                    var page = this.getAttribute('href'); // Obtiene la ruta del enlace clickeado
+                    window.location.href = page; // Redirige a la página correspondiente
+                });
+            });
         });
     </script>
-
-    <main>
-        <!-- Aquí va el contenido principal de la página -->
-    </main>
 
 </body>
 </html>
 
-          
