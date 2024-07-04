@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolce Begliano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="app-name">Dolce Begliano</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/index.html">Reserva</a></li>
+                <li class="nav-item"><a href="/localizacion.html">Localización</a></li>
+                <li class="nav-item"><a href="/localizacion.html">Cómo llegar</a></li>
+                <li class="nav-item"><a href="/menu.html">Menú</a></li>
+                <li class="nav-item"><a href="/about.html">Sobre Nosotros</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img width="700px" height="400px" src="img/Diseño sin título.png" alt="Logotipo Dolce Begliano">
+            </div>
+        </div>
+    </header>
+
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <h1>Realiza tu reserva: </h1>
+</body>
+<div class="min-h-screen flex items-center justify-center bg-zinc-100 dark :bg-zinc-900">
+    <div class="bg-card text-card-foreground p-8 rounded-lg shadow-lg max-w-md w-full">
+      <h1 class="text-center text-2xl font-bold mb-6">reservación</h1>
+      <form class="space-y-4">
+        <div class="flex space-x-4">
+          <div class="flex-1">
+            <label for="actividad" class="block text-sm font-medium text-muted-foreground">actividad</label>
+            <input
+              type="text"
+              id="actividad"
+              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+              placeholder="actividad "
+            />
+          </div>
+          <div class="flex-1">
+            <label for="cantidad de personas" class="block text-sm font-medium text-muted-foreground">cantidad de pesonas</label>
+            <input
+              type="number"
+              id="cantidad de personas"
+              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <div class="flex-1">
+            <label for="cuando asistira" class="block text-sm font-medium text-muted-foreground">cuando asistira</label>
+            <input
+              type="date"
+              id="cuando asistira"
+              class="mt-1 block w-full bg-input border border-border rounded-md py-2 px-3 text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent"/>
+          
