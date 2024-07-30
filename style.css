@@ -275,3 +275,107 @@ button:hover {
 #orderSummary {
     margin-top: 20px;
 }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.app-name {
+    font-size: 1.5em;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.header-container {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-section {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+}
+
+.card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#card-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card-description {
+    font-size: 1em;
+    color: #666;
+}
