@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordenar Comida - Dolce Begliano</title>
+    <title>Dolce Begliano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
             <ul class="nav-list">
                 <li class="nav-item"><a href="/index.html">Reserva</a></li>
                 <li class="nav-item"><a href="/localizacion.html">Localización</a></li>
+                <li class="nav-item"><a href="/localizacion.html">Cómo llegar</a></li>
                 <li class="nav-item"><a href="/menu.html">Menú</a></li>
                 <li class="nav-item"><a href="/about.html">Sobre Nosotros</a></li>
                 <li class="nav-item"><a href="/order.html">Ordenar Comida</a></li>
@@ -27,7 +28,17 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <h1>Nuestro menú:</h1>
+        <div class="bg-primary text-primary-foreground py-4 px-6 rounded-lg shadow-lg max-w-xs mx-auto mt-8">
+            <div class="text-center">
+                <img src="img/Diseño_sin_título.png" alt="Buon appetito!" class="w-full h-auto rounded-lg mb-4">
+                <h1 class="text-3xl font-bold mb-2">Dolce Begliano Restaurant</h1>
+                <p class="text-lg text-muted-foreground">Bienvenidos a nuestro restaurante, donde cada comida es una experiencia inolvidable.</p>
+            </div>
+        </div>
+        <img src="img/menu.png" width="200" height="300" alt="Menú">
+
+        <div class="container mt-8">
             <h1>Ordenar Comida</h1>
             <form id="orderForm">
                 <label for="name">Nombre:</label>
@@ -36,10 +47,8 @@
                 <label for="food">Selecciona tu comida:</label>
                 <select id="food" name="food" required>
                     <option value="pizza">Pizza</option>
-                    <option value="hamburger">Hamburguesa</option>
-                    <option value="sushi">Sushi</option>
+                    <option value="appetizers">Appetizers</option>
                     <option value="pasta">Pasta</option>
-                    <option value="salad">Ensalada</option>
                 </select>
 
                 <label for="quantity">Cantidad:</label>
