@@ -14,8 +14,8 @@
             const food = document.getElementById("food").value;
             const quantity = document.getElementById("quantity").value;
 
-            // Mostrar el resumen del pedido
-            const summaryText = ¡Gracias ${name}! Tu pedido de ${quantity} ${food}(s) fue realizado correctamente.;
+            // Mostrar el resumen del pedido con flechita verde
+            const summaryText = `¡Gracias ${name}! Tu pedido de ${quantity} ${food}(s) fue realizado correctamente. ✅ Pedido realizado!`;
             document.getElementById("summaryText").innerText = summaryText;
             document.getElementById("orderSummary").style.display = "block";
         }
