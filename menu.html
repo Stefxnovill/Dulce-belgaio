@@ -14,8 +14,12 @@
             const food = document.getElementById("food").value;
             const quantity = document.getElementById("quantity").value;
 
+            // Cambiar el texto del botón a "Pedido realizado" con una flechita verde
+            const submitButton = document.querySelector("button[type='submit']");
+            submitButton.innerHTML = "✅ Pedido realizado!";
+
             // Mostrar el resumen del pedido
-            const summaryText = ¡Gracias ${name}! Tu pedido de ${quantity} ${food}(s) fue realizado correctamente.;
+            const summaryText = `¡Gracias ${name}! Tu pedido de ${quantity} ${food}(s) fue realizado correctamente.`;
             document.getElementById("summaryText").innerText = summaryText;
             document.getElementById("orderSummary").style.display = "block";
         }
